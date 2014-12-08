@@ -9,6 +9,14 @@
     <version>1.0</version>
     <packaging>pom</packaging>
 
+    <repositories>
+        <repository>
+            <id>ala-nexus</id>
+            <name>ALA Nexus Repository</name>
+            <url>http://nexus.ala.org.au/content/groups/public/</url>
+        </repository>
+    </repositories>
+
     <distributionManagement>
         <repository>
             <id>ala-repo</id>
