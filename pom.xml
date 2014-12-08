@@ -8,6 +8,32 @@
     <artifactId>ala-parent-pom</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
+    <name>ALA Parent POM</name>
+    <description>ALA Parent POM with repository information</description>
+    <url>https://github.com/AtlasOfLivingAustralia/ala-parent-pom</url>
+
+    <developers>
+        <developer>
+            <email>aruizca@gmail.com</email>
+            <name>Angel Ruiz</name>
+            <url>https://github.com/aruizca</url>
+            <id>aruizca</id>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/AtlasOfLivingAustralia/ala-parent-pom</url>
+        <connection>scm:git:git@github.com:AtlasOfLivingAustralia/ala-parent-pom.git</connection>
+        <developerConnection>scm:git:git@github.com:AtlasOfLivingAustralia/ala-parent-pom.git</developerConnection>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>Mozilla Public License Version 1.1</name>
+            <url>http://www.mozilla.org/MPL/</url>
+            <distribution>ALA Nexus repository</distribution>
+        </license>
+    </licenses>
 
     <repositories>
         <repository>
@@ -17,16 +43,70 @@
         </repository>
     </repositories>
 
-    <distributionManagement>
-        <repository>
-            <id>ala-repo</id>
-            <name>Internal Releases</name>
-            <url>http://nexus.ala.org.au/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>ala-repo</id>
-            <name>Internal Releases</name>
-            <url>http://nexus.ala.org.au/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <profiles>
+        <profile>
+            <id>nexus</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <distributionManagement>
+                <repository>
+                    <id>ala-repo</id>
+                    <name>Internal Releases</name>
+                    <url>http://nexus.ala.org.au/content/repositories/releases/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>ala-repo</id>
+                    <name>Internal Releases</name>
+                    <url>http://nexus.ala.org.au/content/repositories/snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>ossrh</id>
+
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.3</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+
 </project>
