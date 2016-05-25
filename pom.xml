@@ -6,7 +6,7 @@
 
     <groupId>au.org.ala</groupId>
     <artifactId>ala-parent-pom</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>ALA Parent POM</name>
     <description>ALA Parent POM with repository information</description>
@@ -40,6 +40,12 @@
             <id>ala-nexus</id>
             <name>ALA Nexus Repository</name>
             <url>http://nexus.ala.org.au/content/groups/public/</url>
+            <releases>
+	      <enabled>true</enabled>
+	   </releases>
+	   <snapshots>
+	      <enabled>true</enabled>
+	   </snapshots>
         </repository>
     </repositories>
 
@@ -51,13 +57,13 @@
             </activation>
             <distributionManagement>
                 <repository>
-                    <id>ala-repo</id>
-                    <name>Internal Releases</name>
+                    <id>ala-repo-releases</id>
+                    <name>ALA Internal Releases</name>
                     <url>http://nexus.ala.org.au/content/repositories/releases/</url>
                 </repository>
                 <snapshotRepository>
-                    <id>ala-repo</id>
-                    <name>Internal Releases</name>
+                    <id>ala-repo-snapshots</id>
+                    <name>ALA Internal Snapshots</name>
                     <url>http://nexus.ala.org.au/content/repositories/snapshots/</url>
                 </snapshotRepository>
             </distributionManagement>
@@ -67,11 +73,11 @@
 
             <distributionManagement>
                 <snapshotRepository>
-                    <id>ossrh</id>
+                    <id>sonatype-nexus-snapshots</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots</url>
                 </snapshotRepository>
                 <repository>
-                    <id>ossrh</id>
+                    <id>sonatype-nexus-staging</id>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
@@ -84,7 +90,7 @@
                         <version>1.6.3</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>ossrh</serverId>
+                            <serverId>sonatype-nexus-staging</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
