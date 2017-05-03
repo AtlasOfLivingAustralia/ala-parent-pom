@@ -177,6 +177,9 @@
 		</profile>
 		<profile>
 			<id>sonatype-oss-release</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
 
 			<distributionManagement>
 				<snapshotRepository>
