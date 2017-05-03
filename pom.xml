@@ -18,6 +18,12 @@
 			<url>https://github.com/aruizca</url>
 			<id>aruizca</id>
 		</developer>
+		<developer>
+			<email>p_ansell@yahoo.com</email>
+			<name>Peter Ansell</name>
+			<url>https://github.com/ansell</url>
+			<id>ansell</id>
+		</developer>
 	</developers>
 
 	<scm>
