@@ -40,6 +40,14 @@
 		</license>
 	</licenses>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- Default to 1.7, but can be overridden in child projects as necessary -->
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
+
 	<build>
 		<pluginManagement>
 			<plugins>
