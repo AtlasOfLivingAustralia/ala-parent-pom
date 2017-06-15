@@ -156,6 +156,11 @@
 					<version>2.0.0</version>
 				</plugin>
 				<plugin>
+					<groupId>com.github.koraktor</groupId>
+					<artifactId>mavanagaiata</artifactId>
+					<version>0.7.2</version>
+				</plugin>
+				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>animal-sniffer-maven-plugin</artifactId>
 					<version>1.15</version>
