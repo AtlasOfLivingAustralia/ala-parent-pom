@@ -267,6 +267,39 @@
 					<url>http://nexus.ala.org.au/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-enforcer-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>enforce-release-constraints</id>
+								<goals>
+									<goal>enforce</goal>
+								</goals>
+								<configuration>
+									<rules>
+										<requireMavenVersion>
+											<version>[${minimumMavenVersion},)</version>
+										</requireMavenVersion>
+										<requireJavaVersion>
+											<version>[${targetJdk},)</version>
+										</requireJavaVersion>
+										<requirePluginVersions>
+											<message>Best Practice is to always define plugin versions!</message>
+										</requirePluginVersions>
+										<requireReleaseDeps>
+											<message>No Snapshot dependencies allowed when releasing!</message>
+											<onlyWhenRelease>true</onlyWhenRelease>
+										</requireReleaseDeps>
+									</rules>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 		<profile>
 			<id>sonatype-oss-release</id>
@@ -345,7 +378,8 @@
 											<message>Best Practice is to always define plugin versions!</message>
 										</requirePluginVersions>
 										<requireReleaseDeps>
-											<message>No Snapshot dependencies allowed!</message>
+											<message>No Snapshot dependencies allowed when releasing!</message>
+											<onlyWhenRelease>true</onlyWhenRelease>
 										</requireReleaseDeps>
 									</rules>
 								</configuration>
