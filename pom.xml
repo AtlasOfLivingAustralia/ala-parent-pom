@@ -246,6 +246,7 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
+
 			<repositories>
 				<repository>
 					<id>ala-nexus</id>
@@ -253,6 +254,18 @@
 					<url>http://nexus.ala.org.au/content/groups/public/</url>
 					<releases>
 						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+				<!-- Allow the use of snapshots deployed to Sonatype along with snapshots deployed to nexus.ala.org.au -->
+				<repository>
+					<id>sonatype-nexus-snapshots</id>
+					<name>Sonatype Nexus Snapshots</name>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+					<releases>
+						<enabled>false</enabled>
 					</releases>
 					<snapshots>
 						<enabled>true</enabled>
@@ -272,6 +285,7 @@
 					<url>http://nexus.ala.org.au/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
+
 			<build>
 				<plugins>
 					<plugin>
@@ -311,6 +325,20 @@
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
+
+			<repositories>
+				<repository>
+					<id>sonatype-nexus-snapshots</id>
+					<name>Sonatype Nexus Snapshots</name>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
 
 			<distributionManagement>
 				<snapshotRepository>
