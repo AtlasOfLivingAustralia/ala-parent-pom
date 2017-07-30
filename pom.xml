@@ -43,12 +43,12 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<!-- Default to 1.7, but can be overridden in child projects as necessary -->
-		<targetJdk>1.7</targetJdk>
+		<!-- Default to 1.8, but can be overridden in child projects as necessary -->
+		<targetJdk>1.8</targetJdk>
 		<minimumMavenVersion>3.0.5</minimumMavenVersion>
 		<maven.compiler.source>${targetJdk}</maven.compiler.source>
 		<maven.compiler.target>${targetJdk}</maven.compiler.target>
-		<animal-sniffer-signature.artifact>java17</animal-sniffer-signature.artifact>
+		<animal-sniffer-signature.artifact>java18</animal-sniffer-signature.artifact>
 		<animal-sniffer-signature.version>1.0</animal-sniffer-signature.version>
 	</properties>
 
@@ -63,7 +63,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.10.4</version>
+					<version>3.0.0-M1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -185,7 +185,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>1.4.1</version>
+					<version>3.0.0-M1</version>
 					<executions>
 						<execution>
 							<id>enforce-maven</id>
