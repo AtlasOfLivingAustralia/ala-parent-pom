@@ -18,7 +18,7 @@ Use the following as the parent for a pom file to use this parent pom:
      <parent>
          <groupId>au.org.ala</groupId>
          <artifactId>ala-parent-pom</artifactId>
-         <version>4</version>
+         <version>5</version>
      </parent>
 
 ```
