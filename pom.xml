@@ -273,7 +273,7 @@
 				<repository>
 					<id>ala-nexus</id>
 					<name>ALA Nexus Repository</name>
-					<url>http://nexus.ala.org.au/content/groups/public/</url>
+					<url>https://nexus.ala.org.au/content/groups/public/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -300,12 +300,12 @@
 				<repository>
 					<id>ala-repo-release</id>
 					<name>ALA Internal Releases</name>
-					<url>http://nexus.ala.org.au/content/repositories/releases/</url>
+					<url>https://nexus.ala.org.au/content/repositories/releases/</url>
 				</repository>
 				<snapshotRepository>
 					<id>ala-repo-snapshot</id>
 					<name>ALA Internal Snapshots</name>
-					<url>http://nexus.ala.org.au/content/repositories/snapshots/</url>
+					<url>https://nexus.ala.org.au/content/repositories/snapshots/</url>
 				</snapshotRepository>
 			</distributionManagement>
 		</profile>
