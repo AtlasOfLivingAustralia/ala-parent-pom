@@ -344,6 +344,10 @@
 								<rules>
 									<enforceBytecodeVersion>
 										<maxJdkVersion>${targetJdk}</maxJdkVersion>
+										<ignoreClasses>
+											<!-- ignore multirelease JAR classes -->
+											<ignoreClass>META-INF/versions/**/*</ignoreClass>
+										</ignoreClasses>
 									</enforceBytecodeVersion>
 								</rules>
 								<fail>true</fail>
