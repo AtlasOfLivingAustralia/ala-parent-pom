@@ -6,7 +6,7 @@ Deployment of ala-parent-pom is to Sonatype OSSRH for staging, and then release 
 
 Deployment is performed using the following command:
 
-```
+```bash
 mvn clean deploy -Psonatype-oss-release
 ```
 
@@ -14,11 +14,11 @@ mvn clean deploy -Psonatype-oss-release
 
 Use the following as the parent for a pom file to use this parent pom:
 
-```
+```xml
      <parent>
          <groupId>au.org.ala</groupId>
          <artifactId>ala-parent-pom</artifactId>
-         <version>5</version>
+         <version>7</version>
      </parent>
 
 ```
