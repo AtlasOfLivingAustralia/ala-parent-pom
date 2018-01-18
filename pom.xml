@@ -347,6 +347,8 @@
 										<ignoreClasses>
 											<!-- ignore multirelease JAR classes -->
 											<ignoreClass>META-INF/versions/**/*</ignoreClass>
+											<!-- ignore JAVA 9 module-info files, for eg org.ow2.asm:asm:6.0+ -->
+											<ignoreClass>module-info</ignoreClass>
 										</ignoreClasses>
 									</enforceBytecodeVersion>
 								</rules>
