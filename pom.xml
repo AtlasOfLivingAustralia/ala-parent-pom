@@ -57,9 +57,9 @@
 		<!-- JUnit-5 versions, to keep them consistent with one another and use 
 			them for surefire configuration -->
 		<junit.version>4.12</junit.version>
-		<junit.jupiter.version>5.0.1</junit.jupiter.version>
-		<junit.vintage.version>4.12.1</junit.vintage.version>
-		<junit.platform.version>1.0.1</junit.platform.version>
+		<junit.jupiter.version>5.0.3</junit.jupiter.version>
+		<junit.vintage.version>4.12.3</junit.vintage.version>
+		<junit.platform.version>1.0.3</junit.platform.version>
 	</properties>
 
 	<dependencyManagement>
@@ -124,7 +124,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.0.0-M1</version>
+					<version>3.0.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -257,7 +257,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.6</version>
+					<version>3.7</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -267,7 +267,7 @@
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.7.9</version>
+					<version>0.8.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
@@ -287,7 +287,7 @@
 				<plugin>
 					<groupId>com.github.koraktor</groupId>
 					<artifactId>mavanagaiata</artifactId>
-					<version>0.7.2</version>
+					<version>0.8.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
