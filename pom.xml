@@ -103,6 +103,12 @@
 				<version>${junit.jupiter.version}</version>
 				<scope>test</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-params</artifactId>
+				<version>${junit.jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
 			<!-- To avoid compiler warnings about @API annotations in JUnit code -->
 			<dependency>
 				<groupId>org.apiguardian</groupId>
