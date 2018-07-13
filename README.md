@@ -20,7 +20,7 @@ Use the following as the parent for a pom file to use this parent pom:
      <parent>
          <groupId>au.org.ala</groupId>
          <artifactId>ala-parent-pom</artifactId>
-         <version>7</version>
+         <version>10</version>
      </parent>
 
 ```
