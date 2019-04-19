@@ -57,9 +57,9 @@
 		<!-- JUnit-5 versions, to keep them consistent with one another and use 
 			them for surefire configuration -->
 		<junit.version>4.12</junit.version>
-		<junit.jupiter.version>5.2.0</junit.jupiter.version>
-		<junit.vintage.version>5.2.0</junit.vintage.version>
-		<junit.platform.version>1.2.0</junit.platform.version>
+		<junit.jupiter.version>5.4.2</junit.jupiter.version>
+		<junit.vintage.version>5.4.2</junit.vintage.version>
+		<junit.platform.version>1.4.2</junit.platform.version>
 	</properties>
 
 	<dependencyManagement>
@@ -135,7 +135,7 @@
 				<plugin>
 					<groupId>org.codehaus.gmavenplus</groupId>
 					<artifactId>gmavenplus-plugin</artifactId>
-					<version>1.6.1</version>
+					<version>1.6.3</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -191,11 +191,6 @@
                                                 <trimStackTrace>false</trimStackTrace>
                                         </configuration>
 					<dependencies>
-						<dependency>
-							<groupId>org.junit.platform</groupId>
-							<artifactId>junit-platform-surefire-provider</artifactId>
-							<version>${junit.platform.version}</version>
-						</dependency>
 						<!-- JUnit-5 Jupiter engine to run migrated tests -->
 						<dependency>
 							<groupId>org.junit.jupiter</groupId>
@@ -219,11 +214,6 @@
                                                 <trimStackTrace>false</trimStackTrace>
                                         </configuration>
 					<dependencies>
-						<dependency>
-							<groupId>org.junit.platform</groupId>
-							<artifactId>junit-platform-surefire-provider</artifactId>
-							<version>${junit.platform.version}</version>
-						</dependency>
 						<!-- JUnit-5 Jupiter engine to run migrated tests -->
 						<dependency>
 							<groupId>org.junit.jupiter</groupId>
@@ -306,7 +296,7 @@
 				<plugin>
 					<groupId>com.github.koraktor</groupId>
 					<artifactId>mavanagaiata</artifactId>
-					<version>0.8.2</version>
+					<version>0.9.4</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -393,7 +383,7 @@
 						<dependency>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>extra-enforcer-rules</artifactId>
-							<version>1.0-beta-9</version>
+							<version>1.2</version>
 						</dependency>
 					</dependencies>
 				</plugin>
