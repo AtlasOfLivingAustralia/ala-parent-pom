@@ -56,10 +56,10 @@
 
 		<!-- JUnit-5 versions, to keep them consistent with one another and use 
 			them for surefire configuration -->
-		<junit.version>4.12</junit.version>
-		<junit.jupiter.version>5.4.2</junit.jupiter.version>
-		<junit.vintage.version>5.4.2</junit.vintage.version>
-		<junit.platform.version>1.4.2</junit.platform.version>
+		<junit.version>4.13</junit.version>
+		<junit.jupiter.version>5.6.2</junit.jupiter.version>
+		<junit.vintage.version>5.6.2</junit.vintage.version>
+		<junit.platform.version>1.6.2</junit.platform.version>
 	</properties>
 
 	<dependencyManagement>
@@ -92,7 +92,7 @@
 			<dependency>
 				<groupId>org.apiguardian</groupId>
 				<artifactId>apiguardian-api</artifactId>
-				<version>1.0.0</version>
+				<version>1.1.0</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
@@ -124,7 +124,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.2</version>
+					<version>3.0.0-M1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -134,7 +134,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.2</version>
+					<version>3.0.0-M1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -164,7 +164,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.22.2</version>
+					<version>3.0.0-M4</version>
 					<configuration>
                                                 <runOrder>random</runOrder>
                                                 <trimStackTrace>false</trimStackTrace>
@@ -173,7 +173,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>2.22.2</version>
+					<version>3.0.0-M4</version>
 					<configuration>
                                                 <runOrder>random</runOrder>
                                                 <trimStackTrace>false</trimStackTrace>
@@ -228,6 +228,14 @@
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
 					<version>0.8.5</version>
+					<executions>
+						<execution>
+							<id>prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
@@ -274,7 +282,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>3.0.0-M1</version>
+					<version>3.0.0-M3</version>
 					<executions>
 						<execution>
 							<id>enforce-maven</id>
