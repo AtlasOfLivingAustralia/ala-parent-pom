@@ -56,7 +56,7 @@
 
 		<!-- JUnit-5 versions, to keep them consistent with one another and use 
 			them for surefire configuration -->
-		<junit.version>4.13</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<junit.jupiter.version>5.6.2</junit.jupiter.version>
 		<junit.vintage.version>5.6.2</junit.vintage.version>
 		<junit.platform.version>1.6.2</junit.platform.version>
