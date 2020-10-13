@@ -5,7 +5,7 @@
 
 	<groupId>au.org.ala</groupId>
 	<artifactId>ala-parent-pom</artifactId>
-	<version>14-SNAPSHOT</version>
+	<version>14</version>
 	<packaging>pom</packaging>
 	<name>ALA Parent POM</name>
 	<description>ALA Parent POM with repository information</description>
@@ -57,8 +57,8 @@
 		<!-- JUnit-5 versions, to keep them consistent with one another and use 
 			them for surefire configuration -->
 		<junit.version>4.13.1</junit.version>
-		<junit.jupiter.version>5.6.2</junit.jupiter.version>
-		<junit.vintage.version>5.6.2</junit.vintage.version>
+		<junit.jupiter.version>5.7.0</junit.jupiter.version>
+		<junit.vintage.version>5.7.0</junit.vintage.version>
 		<junit.platform.version>1.6.2</junit.platform.version>
 	</properties>
 
