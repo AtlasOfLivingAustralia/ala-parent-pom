@@ -5,7 +5,7 @@
 
 	<groupId>au.org.ala</groupId>
 	<artifactId>ala-parent-pom</artifactId>
-	<version>15-SNAPSHOT</version>
+	<version>15</version>
 	<packaging>pom</packaging>
 	<name>ALA Parent POM</name>
 	<description>ALA Parent POM with repository information</description>
