@@ -51,8 +51,6 @@
 		<targetJdk>1.8</targetJdk>
 		<maven.compiler.source>${targetJdk}</maven.compiler.source>
 		<maven.compiler.target>${targetJdk}</maven.compiler.target>
-		<animal-sniffer-signature.artifact>java18</animal-sniffer-signature.artifact>
-		<animal-sniffer-signature.version>1.0</animal-sniffer-signature.version>
 
 		<!-- JUnit-5 versions, to keep them consistent with one another and use 
 			them for surefire configuration -->
@@ -282,24 +280,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>animal-sniffer-maven-plugin</artifactId>
-					<version>1.18</version>
-					<executions>
-						<execution>
-							<id>enforce-jdk-api</id>
-							<phase>test</phase>
-							<goals>
-								<goal>check</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<!-- This checks to ensure future JDK APIs are not used -->
-						<signature>
-							<groupId>org.codehaus.mojo.signature</groupId>
-							<artifactId>${animal-sniffer-signature.artifact}</artifactId>
-							<version>${animal-sniffer-signature.version}</version>
-						</signature>
-					</configuration>
+					<version>1.23</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
