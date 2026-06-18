@@ -3,7 +3,7 @@ jdk:
   - openjdk17
 
 after_success: '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && travis_retry mvn deploy'
-eenv:
+env:
   global:
     - JAVA_TOOL_OPTIONS=-Dhttps.protocols=TLSv1.2
     - secure: FFIreNltgYBzoWzm4QKQiiuoNZp0Un5dg4HE/DiO1QR8cRSuk1D3RmuwuwAUY9NlAmpXLv5Ff8RDgliE6NWyKL0bDTifd9VEeUkfsXFoK3L4QHMibX1SxIoi0WExwhqvky3x8NcuYgdTbI+6ib1CBLOoZ78DP85fHjdSMCsEthS4m6CHw25itjj2+CVuKf3vKOpDfBkjfpWxUtlW9pqzcjqoS4NiBpkrVneSMqmTr8yjGlH1vh1h/TkArjpPZ2+qhAEWsxbhHcnc2oSGxzG25GyY3PJ7J5rOeJvR5Rn5tEHEZhwP5n8X5TEbmi1Cc6rz3k+Bq3EJG1WO9hcI6WlGfgwkd/EQawAa9KALxcmiAHTLYNOVkGyVz4+OvXTH88MBZkk8NWmIqos2pcOzsHS7+naE7WJu5vkbukduUuA2jbGT/wlFEyoyEX9MBU5gPUWrozIzBeeQkikLp3eNtWWqIsJBLihUqhh72JIaK9f0lZir/UwMdt9mbysPBtvWswTBav16ADONoEawbH40j9JjqFeJlaJJoooGAytMsQy0ddhHxT84ororSxyBifD9Cb3D0gf4g804+J+/llptUaz+JsjBd0+zFcb2sYf79fDgdhm0gXNtBD4xLtAez50ImuM7QJ1a0JYU+M4a5zYU9Jo3Ej7KOkRNcso+YKGqai1O+Ls=
