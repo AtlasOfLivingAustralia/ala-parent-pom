@@ -4,6 +4,7 @@ jdk:
 before_install:
   - echo "USERNAME_SET=${#TRAVIS_DEPLOY_USERNAME}"
   - echo "PASSWORD_LENGTH=${#TRAVIS_DEPLOY_PASSWORD}"
+  - mkdir -p ~/.m2; wget -q -O ~/.m2/settings.xml https://raw.githubusercontent.com/AtlasOfLivingAustralia/travis-build-configuration/master/travis_maven_settings.xml
 after_success: '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && travis_retry mvn deploy'
 env:
   global:
