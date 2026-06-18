@@ -60,6 +60,19 @@
 		<junit.platform.version>1.6.2</junit.platform.version>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>ala-repo-release</id>
+			<name>ALA Internal Releases</name>
+			<url>https://nexus.ala.org.au/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>ala-repo-snapshot</id>
+			<name>ALA Internal Snapshots</name>
+			<url>https://nexus.ala.org.au/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- Manage JUnit versions to keep them consistent with JUnit Platform/Jupiter -->
