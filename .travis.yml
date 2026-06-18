@@ -1,6 +1,7 @@
 language: java
 jdk:
 - openjdk17
+after_success: '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && travis_retry mvn deploy'
 env:
   global:
   - secure: DtkqopQGd4ov26U508KC5VpIV4SJWcqgj9T/jBHy+w9ZSMp40XFaOvw/88kZWL2P68gPDM8zZdl8c+kg3Ogxv31SlRytvjSHwS/xHO1pWq28yVZH8j/rhHb1iHocRsQywA+wG4aeCnJmVjn6Dm+PVDNzS7Ed4HeBp1CQYi5uf54=
