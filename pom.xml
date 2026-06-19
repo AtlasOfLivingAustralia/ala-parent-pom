@@ -49,6 +49,7 @@
 		<!-- Java target, including verification that only APIs from that target have been used -->
 		<!-- Default to 17, but can be overridden in child projects as necessary -->
 		<targetJdk>17</targetJdk>
+		<maven.compiler.release>${targetJdk}</maven.compiler.release>
 		<maven.compiler.source>${targetJdk}</maven.compiler.source>
 		<maven.compiler.target>${targetJdk}</maven.compiler.target>
 
@@ -291,11 +292,6 @@
 					<version>1.1.2</version>
 				</plugin>
 				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>animal-sniffer-maven-plugin</artifactId>
-					<version>1.27</version>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
 					<version>3.6.3</version>
@@ -368,10 +364,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>animal-sniffer-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
